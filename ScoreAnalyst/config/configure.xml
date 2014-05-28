@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scoreAnalyst>
+	<system>
+    <globalDefaultValue     gradeId="3"  database="postgresql"    />
+    <product productName="成绩分析系统" company="湖北省孝感高级中学" author="刘保恩" version="2.0.0.11"/>
+		<database>
+			<sqlserver connectionString="Data Source=PC-20121011ELXG;Initial Catalog={0};Integrated Security=True"/>
+			<sqlite connectionString="Data Source=..\\database\\{0}.db3;Version=3;Page Size=4096;"/>
+			<postgresql connectionString="Server=localhost; Port=5432; Userid=postgres; password=2054299;  Encoding=uft8;database={0}"/>
+			<excel8 description="office 2003" connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR=YES;IMEX=1;'"/>
+		</database>
+	</system>
+	<option>
+			<grade id="1" name="高一年级" database="score1" target="false">
+				<workbook template="template\学科分段统计表-综合.xls" report="report\学科分段统计表-综合.xls" title="2012-2013学年度上学期高一年级期中考试{0}分段统计表" subjectType="9">
+					<sheet subject="语文" totalScore="150" statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="数学" totalScore="150" statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="英语" totalScore="150" statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="物理" totalScore="120" statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="化学" totalScore="120" statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="生物" totalScore="100" statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="政治" totalScore="50"   statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="历史" totalScore="50"   statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="地理" totalScore="50"   statisticsStep="5"   statisticsCount="12" type="1" />
+					<sheet subject="总分" totalScore="940" statisticsStep="10" statisticsCount="27" type="2" />
+				</workbook>
+			</grade>
+			<grade id="2" name="高二年级" database="score2" target="false">
+				<workbook template="template\学科分段统计表-理科.xls" report="report\学科分段统计表-理科.xls" title="2012-2013学年度上学期高二年级期中考试{0}(理科)分段统计表" subjectType="1">
+					<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="物理" totalScore="110" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="化学" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="生物" totalScore="90" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="理综" totalScore="300" statisticsStep="10" statisticsCount="25" type="2" />
+					<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="27" type="2" />
+				</workbook>
+				<workbook template="template\学科分段统计表-文科.xls" report="report\学科分段统计表-文科.xls" title="2012-2013学年度上学期高二年级期中考试{0}(文科)分段统计表" subjectType="2">
+					<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="政治" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="历史" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="地理" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="文综" totalScore="300" statisticsStep="10" statisticsCount="25" type="2" />
+					<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="27" type="2" />
+				</workbook>
+			</grade>
+			<grade id="3" name="高三年级" database="score3" target="true">
+				<workbook template="template\高三年级学科分段统计表-理科.xls" report="report\高三年级学科分段统计表-理科.xls" title="2012-2013学年度高三年八校第一次联考{0}(理科)分段统计表" subjectType="1">
+					<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="物理" totalScore="110" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="化学" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="生物" totalScore="90"   statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="理综" totalScore="300" statisticsStep="10" statisticsCount="25" type="2" />
+					<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="27" type="2" />
+				</workbook>
+				<workbook template="template\高三年级学科分段统计表-文科.xls" report="report\高三年级学科分段统计表-文科.xls" title="2012-2013学年度高三年八校第一次联考{0}(文科)分段统计表" subjectType="2">
+					<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="政治" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="历史" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="地理" totalScore="100" statisticsStep="5" statisticsCount="12" type="1" />
+					<sheet subject="文综" totalScore="300" statisticsStep="10" statisticsCount="25" type="2" />
+					<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="27" type="2" />
+				</workbook>
+			</grade>
+	</option>
+	<databaseSchema>
+		<table id="1" name="理科成绩" target="score" fields="考号,姓名,班级,语文,数学,英语,物理,化学,生物" />
+		<table id="2" name="文科成绩" target="score" fields="考号,姓名,班级,语文,数学,英语,政治,历史,地理" />
+		<table id="3" name="未分文理科成绩" target="score" fields="考号,姓名,班级,语文,数学,英语,物理,化学,生物,政治,历史,地理" />
+		<table id="4" name="任课教师一览表" target="teachers" fields="班级,班主任,语文,数学,英语,物理,化学,生物,政治,历史,地理" />
+		<table id="5" name="班级信息(带考核目标)" target="class" fields="班级,类型,一本指标,二本指标,三本指标" />
+		<table id="6" name="不计考核学生名单" target="ignore" fields="考号,姓名,班级" />
+		<table id="7" name="年级考核目标" target="target"  fields="学科类型,指标类型,年级指标" />
+	</databaseSchema>
+</scoreAnalyst>

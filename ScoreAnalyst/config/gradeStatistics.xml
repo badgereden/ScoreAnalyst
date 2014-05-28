@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scoreAnalyst>
+	<grade id="1" name="高一年级" >
+		<workbook  title="2012-2013学年度上学期高一年级期中考试{0}分段统计表" subjectType="9">
+			<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="物理" totalScore="120" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="化学" totalScore="120" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="生物" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="政治" totalScore="50" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="历史" totalScore="50" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="地理" totalScore="50" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="总分" totalScore="940" statisticsStep="10" statisticsCount="26" />
+		</workbook>
+	</grade>
+	<grade id="2" name="高二年级" >
+		<workbook  title="2012-2013学年度上学期高二年级期中考试{0}(理科)分段统计表" subjectType="1">
+			<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="物理" totalScore="110" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="化学" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="生物" totalScore="90" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="理综" totalScore="300" statisticsStep="10" statisticsCount="26" />
+			<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="26" />
+		</workbook>
+		<workbook  title="2012-2013学年度上学期高二年级期中考试{0}(文科)分段统计表" subjectType="2">
+			<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="政治" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="历史" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="地理" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="文综" totalScore="300" statisticsStep="10" statisticsCount="26" />
+			<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="26" />
+		</workbook>
+	</grade>
+	<grade id="3" name="高三年级" >
+		<workbook  title="2012-2013学年度高三年八校第一次联考{0}(理科)分段统计表" subjectType="1">
+			<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="物理" totalScore="110" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="化学" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="生物" totalScore="90" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="理综" totalScore="300" statisticsStep="10" statisticsCount="26" />
+			<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="26" />
+		</workbook>
+		<workbook  title="2012-2013学年度高三年八校第一次联考{0}(文科)分段统计表" subjectType="2">
+			<sheet subject="语文" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="数学" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="英语" totalScore="150" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="政治" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="历史" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="地理" totalScore="100" statisticsStep="5" statisticsCount="26" />
+			<sheet subject="文综" totalScore="300" statisticsStep="10" statisticsCount="26" />
+			<sheet subject="总分" totalScore="750" statisticsStep="10" statisticsCount="26" />
+		</workbook>
+	</grade>
+</scoreAnalyst>

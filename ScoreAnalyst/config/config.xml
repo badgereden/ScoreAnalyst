@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<scoreAnalyst caption="设置">
+  <report caption="报表格式设置">
+    <grade caption="测试" id="0" name="测试" database="test" target="true">
+      <workbook caption="理科"  id="0"  title="高一年级上学期期中测试{0}(理科)分段统计表" template="template\学科分段统计表-理科.xls" report="report\学科分段统计表-理科.xls" subjectType="1">
+        <sheet caption="语文"  sheetName="语文"  subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+        <sheet caption="数学"  sheetName="数学"  subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+        <sheet caption="英语"  sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+        <sheet caption="物理" sheetName="物理政治" subject="物理" totalScore="110" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+        <sheet caption="化学" sheetName="化学历史" subject="化学" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+        <sheet caption="生物" sheetName="生物地理" subject="生物" totalScore="90" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+        <sheet caption="理综" sheetName="文综理综" subject="理综" totalScore="300" classStep="10" classCount="26"  gradeStep="10" gradeCount="26" ignoreRate="true"  ignore="true"/>
+        <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true" />
+    </workbook>
+    <workbook caption="文科" title="高一年级上学期期中测试{0}(文科)分段统计表" template="template\学科分段统计表-文科.xls" report="report\学科分段统计表-文科.xls"  subjectType="2">
+      <sheet caption="语文"  sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26"  />
+      <sheet caption="数学"  sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+      <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+      <sheet caption="政治" sheetName="物理政治" subject="政治" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="历史" sheetName="化学历史" subject="历史" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="地理" sheetName="生物地理" subject="地理" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="文综" sheetName="文综理综" subject="文综" totalScore="300" classStep="10" classCount="26"  gradeStep="10" gradeCount="26" ignoreRate="true"  ignore="true" />
+      <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true" />
+    </workbook>
+  </grade>
+
+    <grade caption="高一年级" id="1" name="高一年级" database="score1" target="false">
+      <workbook caption="综合"  title="2012-2013学年度上学期高一年级期末考试{0}分段统计表" template="template\学科分段统计表-综合.xls" report="report\学科分段统计表-综合.xls" subjectType="9">
+      <sheet caption="语文" sheetName="语文"  subject="语文" totalScore="150" classStep="5" classCount="12"   gradeStep="5" gradeCount="26"   />
+      <sheet caption="数学" sheetName="数学"  subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+      <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="物理" sheetName="物理" subject="物理" totalScore="120" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="化学" sheetName="化学" subject="化学" totalScore="120" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+      <sheet caption="生物" sheetName="生物" subject="生物" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="政治" sheetName="政治" subject="政治" totalScore="50" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="历史" sheetName="历史" subject="历史" totalScore="50" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="地理" sheetName="地理" subject="地理" totalScore="50" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="总分" sheetName="总分" subject="总分" totalScore="940" classStep="10" classCount="12" gradeStep="5" gradeCount="26"  />
+    </workbook>
+  </grade>
+
+    <grade caption="高二年级" id="2" name="高二年级" database="score2" target="true">
+      <workbook caption="理科"  title="2012-2013学年度上学期高二年级期中考试{0}分段统计表" template="template\学科分段统计表-理科.xls"  report="report\学科分段统计表-理科.xls" subjectType="1">
+			<sheet caption="语文" sheetName="语文"  subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+			<sheet caption="数学" sheetName="数学"  subject="数学" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26"  />
+			<sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+			<sheet caption="物理" sheetName="物理政治" subject="物理" totalScore="120" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+			<sheet caption="化学" sheetName="化学历史" subject="化学" totalScore="110" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+			<sheet caption="生物" sheetName="生物地理" subject="生物" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="理综" sheetName="文综理综" subject="理综" totalScore="300" classStep="10" classCount="12" gradeStep="5" gradeCount="26"  ignoreRate="true"  ignore="true"/>
+      <sheet caption="总分" sheetName="总分" subject="总分" totalScore="780" classStep="10" classCount="26" gradeStep="5" gradeCount="26"  />
+		</workbook>
+      <workbook caption="文科"  title="2012-2013学年度上学期高二年级期中考试{0}分段统计表" template="template\学科分段统计表-文科.xls" report="report\学科分段统计表-文科.xls" subjectType="2">
+      <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+      <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+      <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="政治" sheetName="物理政治" subject="政治" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="历史" sheetName="化学历史" subject="历史" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="地理" sheetName="生物地理" subject="地理" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="文综" sheetName="文综理综" subject="文综" totalScore="300" classStep="10" classCount="12" gradeStep="10" gradeCount="26"  ignoreRate="true"  ignore="true" />
+      <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26"  />
+		</workbook>
+	</grade>
+
+    <grade caption="高三年级" id="3" name="高三年级" database="score3" target="true" >
+      <workbook caption="理科"  title="2012-2013学年度高三年级孝感市三统{0}分段统计表" template="template\学科分段统计表-理科.xls" report="report\学科分段统计表-理科.xls" subjectType="1">
+      <sheet caption="语文" sheetName="语文"  subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+      <sheet caption="数学" sheetName="数学"  subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"   />
+      <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="物理" sheetName="物理政治" subject="物理" totalScore="110" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="化学" sheetName="化学历史" subject="化学" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="生物" sheetName="生物地理" subject="生物" totalScore="90" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="理综" sheetName="文综理综" subject="理综" totalScore="300" classStep="10" classCount="12"  gradeStep="10" gradeCount="26" ignoreRate="true"  ignore="true"/>
+      <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true" />
+    </workbook>
+      <workbook caption="文科"  title="2012-2013学年度高三年级孝感市三统{0}分段统计表" template="template\学科分段统计表-文科.xls" report="report\学科分段统计表-文科.xls"  subjectType="2">
+      <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26"  />
+      <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+      <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12"  gradeStep="5" gradeCount="26" />
+      <sheet caption="政治" sheetName="物理政治" subject="政治" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="历史" sheetName="化学历史" subject="历史" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="地理" sheetName="生物地理" subject="地理" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"  />
+      <sheet caption="文综" sheetName="文综理综" subject="文综" totalScore="300" classStep="10" classCount="12"  gradeStep="10" gradeCount="26" ignoreRate="true"  ignore="true" />
+      <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true" />
+    </workbook>
+	</grade>
+</report>
+  <database caption="数据库设置">
+    <option caption="连接选项">
+      <connection caption="postgres" type="postgres" connectionString="Server=localhost; Port=5432; Userid=postgres; password=2054299;  Encoding=uft8;database={0}"/>
+      <connection caption="sqlite3" type="sqlite3" connectionString="Data Source=..\\database\\{0}.db3;Version=3;Page Size=4096;"/>
+      <connection caption="sqlserver" type="sqlserver"  connectionString="Data Source=PC-20121011ELXG;Initial Catalog={0};Integrated Security=True"/>
+      <connection caption="excel8" type="excel8" connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR=YES;IMEX=1;'"/>
+      <connection caption="excel10" type="excel10" connectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 10.0;HDR=YES;IMEX=1;'"/>
+    </option>
+    <schema caption="数据格式">
+      <table caption="理科成绩" id="1" name="理科成绩" target="score" fields="考号,姓名,班级,语文,数学,英语,物理,化学,生物" />
+      <table caption="文科成绩" id="2" name="文科成绩" target="score" fields="考号,姓名,班级,语文,数学,英语,政治,历史,地理" />
+      <table caption="未分文理科成绩" id="3" name="未分文理科成绩" target="score" fields="考号,姓名,班级,语文,数学,英语,物理,化学,生物,政治,历史,地理" />
+      <table caption="任课教师一览表" id="4" name="任课教师一览表" target="teachers" fields="班级,班主任,语文,数学,英语,物理,化学,生物,政治,历史,地理" />
+      <table caption="班级信息(带考核目标)" id="5" name="班级信息(带考核目标)" target="class" fields="班级,类型,一本指标,二本指标,三本指标" />
+      <table caption="不计考核学生名单" id="6" name="不计考核学生名单" target="ignore" fields="考号,姓名,班级" />
+      <table caption="年级考核目标" id="7" name="年级考核目标" target="target"  fields="学科类型,指标类型,年级指标" />
+      <table caption="各学科分数线" id="8" name="各学科分数线" target="minimum_score"  fields="id,学科类型,学科,指标类型,分数线" />
+    </schema>
+  </database>
+  <product caption="产品信息"    productName="成绩分析系统" company="湖北省孝感高级中学" author="刘保恩" version="2.0.0.11"/>
+  <default caption="默认设置" gradeId="3"  database="postgres" excel="excel8" />
+</scoreAnalyst>
