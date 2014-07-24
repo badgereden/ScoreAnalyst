@@ -32,11 +32,13 @@
             this.chbIgnore = new System.Windows.Forms.CheckBox();
             this.btnCancle = new System.Windows.Forms.Button();
             this.btnEnter = new System.Windows.Forms.Button();
+            this.chbUpdateID = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chbUpdateID);
             this.groupBox1.Controls.Add(this.chbIgnore);
             this.groupBox1.Location = new System.Drawing.Point(10, 8);
             this.groupBox1.Name = "groupBox1";
@@ -49,7 +51,7 @@
             this.chbIgnore.AutoSize = true;
             this.chbIgnore.Checked = true;
             this.chbIgnore.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbIgnore.Location = new System.Drawing.Point(22, 31);
+            this.chbIgnore.Location = new System.Drawing.Point(22, 65);
             this.chbIgnore.Name = "chbIgnore";
             this.chbIgnore.Size = new System.Drawing.Size(120, 16);
             this.chbIgnore.TabIndex = 0;
@@ -76,6 +78,16 @@
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
+            // chbUpdateID
+            // 
+            this.chbUpdateID.AutoSize = true;
+            this.chbUpdateID.Location = new System.Drawing.Point(22, 30);
+            this.chbUpdateID.Name = "chbUpdateID";
+            this.chbUpdateID.Size = new System.Drawing.Size(168, 16);
+            this.chbUpdateID.TabIndex = 1;
+            this.chbUpdateID.Text = "自动匹配不计考核学生考号";
+            this.chbUpdateID.UseVisualStyleBackColor = true;
+            // 
             // FormInitilize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -98,5 +110,6 @@
         private System.Windows.Forms.CheckBox chbIgnore;
         private System.Windows.Forms.Button btnCancle;
         private System.Windows.Forms.Button btnEnter;
+        private System.Windows.Forms.CheckBox chbUpdateID;
     }
 }

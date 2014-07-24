@@ -11,6 +11,7 @@ namespace ScoreAnalyst
 {
     public partial class FormInitilize : Form
     {
+        private bool finish = false;
         public FormInitilize()
         {
             InitializeComponent();
@@ -23,12 +24,29 @@ namespace ScoreAnalyst
 
         private void btnEnter_Click(object sender, EventArgs e)
         {
-            bool delete_ignore = chbIgnore.Checked;
-            foreach (XSubjectGroup sg in Global.CurrentGrade.Database.Initialize.SubjectGroupList)
+            if (finish)
             {
-                StaticQueryHelper.Initialize(sg.SubjectType, sg.SubjectList, sg.TotalScoreExpression,delete_ignore);
+                this.Close();
+                return;
             }
-            MessageBox.Show("初始化成功");
+            else
+            {
+                bool delete_ignore = chbIgnore.Checked;
+                if (chbUpdateID.Checked)
+                {
+                    int rows = StaticQueryHelper.UpdateIgnoreID();
+                    MessageBox.Show(string.Format("自动匹配{0}名不计考核学生考号", rows));
+                }
+
+
+                foreach (XSubjectGroup sg in Global.CurrentGrade.Database.Initialize.SubjectGroupList)
+                {
+                    StaticQueryHelper.Initialize(sg.SubjectType, sg.SubjectList, sg.TotalScoreExpression, delete_ignore);
+                }
+                MessageBox.Show("初始化成功");
+                this.btnEnter.Text = "完成";
+                finish = true;
+            }
         }
     }
 }

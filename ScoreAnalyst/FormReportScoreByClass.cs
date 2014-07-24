@@ -66,7 +66,7 @@ namespace ScoreAnalyst
         }
 
         /// <summary>
-        /// 分班级输出
+        /// 输出成绩（分班级）
         /// </summary>
         private void ReportIndivision()
         {
@@ -76,10 +76,10 @@ namespace ScoreAnalyst
             foreach (XWorkbook wb in Global.CurrentGrade.WorkbookList)
             {
                 //StaticQueryHelper.Initialize(wb.SubjectType);
-                dtClass = StaticQueryHelper.ExecuteQuery(string.Format("select distinct(班级) as 班级  from \"class\" where 类型={0} order by 班级", wb.SubjectType));
+                dtClass = StaticQueryHelper.ExecuteQuery(string.Format("select distinct(班级) as 班级  from \"class\" where 类型={0} order by 班级,总分 desc", wb.SubjectType));
                 foreach (DataRow dr in dtClass.Rows)
                 {
-                    dt = StaticQueryHelper.ExecuteQuery(string.Format("select  * from {0} where 班级={1}", getTableName(wb.SubjectType),dr[0].ToString()));
+                    dt = StaticQueryHelper.ExecuteQuery(string.Format("select  * from {0} where 班级={1} order by 总分 desc", getTableName(wb.SubjectType),dr[0].ToString()));
                     ew.CreateSheet(dr[0].ToString());
                     ew.WriteHeader(0, 0, dt);
                     ew.Write(1, 0, dt);
@@ -110,7 +110,7 @@ namespace ScoreAnalyst
                 ew.Write(1, 0, dt);
                 //ew.SetColumnWidth(0, 10);
                 //ew.SetColumnWidth(1, 6);
-                ew.CreateFreezePane(2, 0);
+                ew.CreateFreezePane(2, 1);
 
                 updateProgress(50);
                 Application.DoEvents();

@@ -32,24 +32,14 @@
             this.miFile = new System.Windows.Forms.ToolStripMenuItem();
             this.miExit = new System.Windows.Forms.ToolStripMenuItem();
             this.miData = new System.Windows.Forms.ToolStripMenuItem();
-            this.miBrowserData = new System.Windows.Forms.ToolStripMenuItem();
-            this.miBrowserScore = new System.Windows.Forms.ToolStripMenuItem();
-            this.miBrowserTeachers = new System.Windows.Forms.ToolStripMenuItem();
-            this.miBrowserClass = new System.Windows.Forms.ToolStripMenuItem();
-            this.miBrowserIgnore = new System.Windows.Forms.ToolStripMenuItem();
-            this.miImportData = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.miClearData = new System.Windows.Forms.ToolStripMenuItem();
-            this.miClearScore = new System.Windows.Forms.ToolStripMenuItem();
-            this.miClearTeachers = new System.Windows.Forms.ToolStripMenuItem();
-            this.miClearClassInfo = new System.Windows.Forms.ToolStripMenuItem();
-            this.miClearIgnore = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBackupAndRestore = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBackupCurrentScore = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiRestoreScore = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiClearData = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBrowserDataSelecter = new System.Windows.Forms.ToolStripMenuItem();
             this.miTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiInitialize = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiNewReport = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiGradeStatistics = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSection = new System.Windows.Forms.ToolStripMenuItem();
@@ -61,8 +51,6 @@
             this.tsmiTest = new System.Windows.Forms.ToolStripMenuItem();
             this.miOption = new System.Windows.Forms.ToolStripMenuItem();
             this.miConfigManager = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsmiInitialize = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,113 +79,19 @@
             // miExit
             // 
             this.miExit.Name = "miExit";
-            this.miExit.Size = new System.Drawing.Size(118, 22);
+            this.miExit.Size = new System.Drawing.Size(152, 22);
             this.miExit.Text = "退出(&Q)";
             this.miExit.Click += new System.EventHandler(this.MiExitClick);
             // 
             // miData
             // 
             this.miData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miBrowserData,
-            this.miImportData,
-            this.toolStripMenuItem1,
-            this.miClearData,
             this.tsmiBackupAndRestore,
-            this.tsmiClearData,
-            this.tsmiBrowserDataSelecter});
+            this.tsmiBrowserDataSelecter,
+            this.tsmiClearData});
             this.miData.Name = "miData";
             this.miData.Size = new System.Drawing.Size(61, 21);
             this.miData.Text = "数据(&D)";
-            // 
-            // miBrowserData
-            // 
-            this.miBrowserData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miBrowserScore,
-            this.miBrowserTeachers,
-            this.miBrowserClass,
-            this.miBrowserIgnore});
-            this.miBrowserData.Name = "miBrowserData";
-            this.miBrowserData.Size = new System.Drawing.Size(152, 22);
-            this.miBrowserData.Text = "查看数据(&S)";
-            // 
-            // miBrowserScore
-            // 
-            this.miBrowserScore.Name = "miBrowserScore";
-            this.miBrowserScore.Size = new System.Drawing.Size(200, 22);
-            this.miBrowserScore.Text = "学生成绩(&S)";
-            this.miBrowserScore.Click += new System.EventHandler(this.miBrowserScore_Click);
-            // 
-            // miBrowserTeachers
-            // 
-            this.miBrowserTeachers.Name = "miBrowserTeachers";
-            this.miBrowserTeachers.Size = new System.Drawing.Size(200, 22);
-            this.miBrowserTeachers.Text = "任课教师(&T)";
-            this.miBrowserTeachers.Click += new System.EventHandler(this.miBrowserTeachers_Click);
-            // 
-            // miBrowserClass
-            // 
-            this.miBrowserClass.Name = "miBrowserClass";
-            this.miBrowserClass.Size = new System.Drawing.Size(200, 22);
-            this.miBrowserClass.Text = "班级信息及考核目标(&C)";
-            this.miBrowserClass.Click += new System.EventHandler(this.miBrowserClass_Click);
-            // 
-            // miBrowserIgnore
-            // 
-            this.miBrowserIgnore.Name = "miBrowserIgnore";
-            this.miBrowserIgnore.Size = new System.Drawing.Size(200, 22);
-            this.miBrowserIgnore.Text = "不计考核学生名单(&I)";
-            this.miBrowserIgnore.Click += new System.EventHandler(this.miBrowserIgnore_Click);
-            // 
-            // miImportData
-            // 
-            this.miImportData.Name = "miImportData";
-            this.miImportData.Size = new System.Drawing.Size(152, 22);
-            this.miImportData.Text = "导入数据(&I)...";
-            this.miImportData.Click += new System.EventHandler(this.miImportData_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
-            // 
-            // miClearData
-            // 
-            this.miClearData.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miClearScore,
-            this.miClearTeachers,
-            this.miClearClassInfo,
-            this.miClearIgnore});
-            this.miClearData.Name = "miClearData";
-            this.miClearData.Size = new System.Drawing.Size(152, 22);
-            this.miClearData.Text = "清空数据(&D)";
-            // 
-            // miClearScore
-            // 
-            this.miClearScore.Name = "miClearScore";
-            this.miClearScore.Size = new System.Drawing.Size(200, 22);
-            this.miClearScore.Text = "学生成绩(&S)";
-            this.miClearScore.Click += new System.EventHandler(this.miClearScore_Click);
-            // 
-            // miClearTeachers
-            // 
-            this.miClearTeachers.Name = "miClearTeachers";
-            this.miClearTeachers.Size = new System.Drawing.Size(200, 22);
-            this.miClearTeachers.Text = "任课教师(&T)";
-            this.miClearTeachers.Click += new System.EventHandler(this.miClearTeachers_Click);
-            // 
-            // miClearClassInfo
-            // 
-            this.miClearClassInfo.Name = "miClearClassInfo";
-            this.miClearClassInfo.Size = new System.Drawing.Size(200, 22);
-            this.miClearClassInfo.Text = "班级信息及考核目标(&C)";
-            this.miClearClassInfo.Click += new System.EventHandler(this.miClearClassInfo_Click);
-            // 
-            // miClearIgnore
-            // 
-            this.miClearIgnore.Name = "miClearIgnore";
-            this.miClearIgnore.Size = new System.Drawing.Size(200, 22);
-            this.miClearIgnore.Text = "不计考核学生名单(&I)";
-            this.miClearIgnore.Click += new System.EventHandler(this.miClearIgnore_Click);
             // 
             // tsmiBackupAndRestore
             // 
@@ -226,7 +120,7 @@
             // 
             this.tsmiClearData.Name = "tsmiClearData";
             this.tsmiClearData.Size = new System.Drawing.Size(152, 22);
-            this.tsmiClearData.Text = "清空";
+            this.tsmiClearData.Text = "清空数据";
             this.tsmiClearData.Click += new System.EventHandler(this.tsmiClearData_Click);
             // 
             // tsmiBrowserDataSelecter
@@ -250,6 +144,18 @@
             this.miTool.Name = "miTool";
             this.miTool.Size = new System.Drawing.Size(59, 21);
             this.miTool.Text = "报表(&T)";
+            // 
+            // tsmiInitialize
+            // 
+            this.tsmiInitialize.Name = "tsmiInitialize";
+            this.tsmiInitialize.Size = new System.Drawing.Size(220, 22);
+            this.tsmiInitialize.Text = "手动初始化";
+            this.tsmiInitialize.Click += new System.EventHandler(this.tsmiInitialize_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(217, 6);
             // 
             // tsmiNewReport
             // 
@@ -331,18 +237,6 @@
             this.miConfigManager.Text = "配置文件管理";
             this.miConfigManager.Click += new System.EventHandler(this.miConfigManager_Click);
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(217, 6);
-            // 
-            // tsmiInitialize
-            // 
-            this.tsmiInitialize.Name = "tsmiInitialize";
-            this.tsmiInitialize.Size = new System.Drawing.Size(220, 22);
-            this.tsmiInitialize.Text = "手动初始化";
-            this.tsmiInitialize.Click += new System.EventHandler(this.tsmiInitialize_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -366,21 +260,9 @@
         private System.Windows.Forms.MenuStrip MainMenu;
         private System.Windows.Forms.ToolStripMenuItem miFile;
         private System.Windows.Forms.ToolStripMenuItem miData;
-        private System.Windows.Forms.ToolStripMenuItem miBrowserData;
-        private System.Windows.Forms.ToolStripMenuItem miImportData;
         private System.Windows.Forms.ToolStripMenuItem miHelp;
         private System.Windows.Forms.ToolStripMenuItem miExit;
-        private System.Windows.Forms.ToolStripMenuItem miBrowserScore;
-        private System.Windows.Forms.ToolStripMenuItem miBrowserTeachers;
-        private System.Windows.Forms.ToolStripMenuItem miBrowserClass;
         private System.Windows.Forms.ToolStripMenuItem miTool;
-        private System.Windows.Forms.ToolStripMenuItem miBrowserIgnore;
-        private System.Windows.Forms.ToolStripMenuItem miClearData;
-        private System.Windows.Forms.ToolStripMenuItem miClearScore;
-        private System.Windows.Forms.ToolStripMenuItem miClearTeachers;
-        private System.Windows.Forms.ToolStripMenuItem miClearClassInfo;
-        private System.Windows.Forms.ToolStripMenuItem miClearIgnore;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tsmiAbout;
         private System.Windows.Forms.ToolStripMenuItem tsmiGradeStatistics;
         private System.Windows.Forms.ToolStripMenuItem tsmiSection;

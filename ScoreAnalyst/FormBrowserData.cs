@@ -42,7 +42,7 @@ namespace ScoreAnalyst
 
         protected override void OnFormClosed(FormClosedEventArgs e)
         {
-            dt.Dispose();
+            //dt.Dispose();
             base.OnFormClosed(e);
         }
 
