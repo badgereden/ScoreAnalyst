@@ -241,15 +241,19 @@ namespace ScoreAnalyst
         public static int  GetAttributeInt32Value(this XmlNode node,string attributeName,int defaultValue)
         {
             if (node == null)
+            {
                 return defaultValue;
-
+            }
             int result;
             XmlAttribute xa=node.Attributes[attributeName];
-            if((xa!=null) &&(int.TryParse(xa.Value,out result)))
+            if ((xa != null) && (int.TryParse(xa.Value, out result)))
             {
-                   return result;
+                return result;
             }
-            return defaultValue;
+            else
+            {
+                return defaultValue;
+            }
         }
         /// <summary>
         /// 从指定节点返回指定属性的string值,如果属性不存在则返回缺省值
@@ -280,16 +284,19 @@ namespace ScoreAnalyst
         public static bool GetAttributeBoolValue(this XmlNode node, string attributeName, bool defaultValue)
         {
             if (node == null)
+            {
                 return defaultValue;
-
+            }
             bool result;
             XmlAttribute xa = node.Attributes[attributeName];
-            if ((xa != null)&&(bool.TryParse(xa.Value,out result)))
+            if ((xa != null) && (bool.TryParse(xa.Value, out result)))
             {
-                    return result;
+                return result;
             }
-
-            return defaultValue;
+            else
+            {
+                return defaultValue;
+            }
         }
         /// <summary>
         /// 从指定节点返回指定属性的double值,如果指定的属性不存在则返回缺省值.
@@ -301,16 +308,19 @@ namespace ScoreAnalyst
         public static double GetAttributeDoubleValue(this XmlNode node, string attributeName, double defaultValue)
         {
             if (node == null)
+            {
                 return defaultValue;
-
+            }
             double result;
             XmlAttribute xa = node.Attributes[attributeName];
             if ((xa != null) && (double.TryParse(xa.Value, out result)))
             {
                 return result;
             }
-
-            return defaultValue;
+            else
+            {
+                return defaultValue;
+            }
         }
        
 

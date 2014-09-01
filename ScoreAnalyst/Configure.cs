@@ -17,13 +17,20 @@ namespace ScoreAnalyst
         private XmlDocument doc = null;     //XmlDocument
         private bool disposed = false;          //Dispose模式标志位
 
-        //构造函数
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="fileName">配置文件的位置</param>
         public SAConfigureReader(string fileName)
         {
             doc = new XmlDocument();
             doc.Load(fileName);
         }
-        //返回年级列表->填充年级列表选择框
+
+        /// <summary>
+        /// 返回年级列表->填充年级列表选择框
+        /// </summary>
+        /// <returns>返回用于填充年级列表的List对象</returns>
         public List<MyListItem<int>> GetGradeList()
         {
             string grade_path = "/scoreAnalyst/grades/grade";
@@ -35,29 +42,43 @@ namespace ScoreAnalyst
             }
             return grades;
         }
-
-        //返回指定年级节点
+        /// <summary>
+        ///返回指定年级节点
+        /// </summary>
+        /// <param name="gradeId">年级ID</param>
+        /// <returns></returns>
         public XmlNode GetGradeNode(int gradeId)
         {
             string grade_path = string.Format("/scoreAnalyst/grades/grade[@id={0}]", gradeId);
             XmlNode node = doc.SelectSingleNode(grade_path);
             return node;
         }
-        //返回默认节点
+        /// <summary>
+        /// 返回default节点
+        /// </summary>
+        /// <returns></returns>
         public XmlNode GetDefaultNode()
         {
             string default_path = "/scoreAnalyst/default";
             XmlNode node = doc.SelectSingleNode(default_path);
             return node;
         }
-        //返回产品信息节点
+        /// <summary>
+        /// 返回产品信息节点
+        /// </summary>
+        /// <returns></returns>
         public XmlNode GetProductNode()
         {
             string default_path = "/scoreAnalyst/product";
             XmlNode node = doc.SelectSingleNode(default_path);
             return node;
         }
-        //返回连接格式化连接字符串
+
+        /// <summary>
+        /// 返回连接字符串的格式化字符串
+        /// </summary>
+        /// <param name="dbType"></param>
+        /// <returns></returns>
         public string GetConnectionStringFormat(string dbType)
         {
            string cnstr = "/scoreAnalyst/connections/connection[@type=\"{0}\"]";
@@ -216,7 +237,9 @@ namespace ScoreAnalyst
 
 
     }
-
+    /// <summary>
+    /// 对应一个报表文件
+    /// </summary>
     public struct XWorkbook
     {
         public string Title

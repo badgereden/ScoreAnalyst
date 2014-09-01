@@ -76,7 +76,7 @@ namespace ScoreAnalyst
             foreach (XWorkbook wb in Global.CurrentGrade.WorkbookList)
             {
                 //StaticQueryHelper.Initialize(wb.SubjectType);
-                dtClass = StaticQueryHelper.ExecuteQuery(string.Format("select distinct(班级) as 班级  from \"class\" where 类型={0} order by 班级,总分 desc", wb.SubjectType));
+                dtClass = StaticQueryHelper.ExecuteQuery(string.Format("select distinct(班级) as 班级  from \"class\" where 类型={0} order by 班级;", wb.SubjectType));
                 foreach (DataRow dr in dtClass.Rows)
                 {
                     dt = StaticQueryHelper.ExecuteQuery(string.Format("select  * from {0} where 班级={1} order by 总分 desc", getTableName(wb.SubjectType),dr[0].ToString()));
