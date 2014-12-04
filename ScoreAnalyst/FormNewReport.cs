@@ -209,6 +209,7 @@ namespace ScoreAnalyst
                     classCount = dt.Rows.Count;
                     ew.Write(startRow, 4, StaticQueryHelper.GetClassSectionStatistics(wb.SubjectType, sh.Subject, sh.ClassStep, sh.ClassCount), 1, true);
                     
+                    endRow = startRow + classCount + 1;
                     //如果设置为忽略统计信息,则不输出这三列.
                     if (!sh.IgnoreRate)
                     {
@@ -220,7 +221,6 @@ namespace ScoreAnalyst
                         ew.Write(endRow, 6 + sh.ClassCount, StaticQueryHelper.GetGradeAverage(wb.SubjectType, sh.Subject));
                     }
                     //合计
-                    endRow = startRow+classCount + 1;
                     ew.Write(endRow, 0, "合计");
                     ew.MergeCells(endRow, 0, endRow, 1);
                     ew.SetCenter(endRow,0);

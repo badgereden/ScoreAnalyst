@@ -23,7 +23,7 @@ namespace ScoreAnalyst
             //task = new Task(report);
             //task.ContinueWith(finished);
         }
-
+         
         private void btnBrowser_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();
