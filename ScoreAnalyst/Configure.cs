@@ -421,6 +421,8 @@ namespace ScoreAnalyst
         public string Name{get; private set;}
         public string DatabaseName{get; private set;}
         public bool Target{ get; private set; }
+
+        public bool Contain3th { get; private set; }
         public List<XWorkbook> WorkbookList { get; private set; }
         public XDatabase Database { get; private set; }
         public XGrade(XmlNode node)
@@ -434,6 +436,7 @@ namespace ScoreAnalyst
             Name = node.GetAttributeStringValue("name", "");
             DatabaseName = node.GetAttributeStringValue("database", "");
             Target = node.GetAttributeBoolValue("target", false);
+            Contain3th = node.GetAttributeBoolValue("contain3th", false);
             Database = new XDatabase(node.SelectSingleNode("./database"));
             WorkbookList = new List<XWorkbook>(3);
             foreach (XmlNode n in node.SelectNodes("./report/workbook"))
