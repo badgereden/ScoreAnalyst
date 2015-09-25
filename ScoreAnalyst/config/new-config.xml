@@ -79,9 +79,9 @@
           </schema>
         </database>
       </grade>
-        <grade caption="高二年级" id="2" name="高二年级" database="score2013" target="true">
+        <grade caption="高二年级" id="2" name="高二年级" database="score2014" target="true">
             <report caption="报表格式设置">
-                <workbook caption="理科" id="0" title="2014-2015学年度高一年级下学期期中考试{0}(理科)分段统计表" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
+                <workbook caption="理科" id="0" title="2015-2016学年度高二年级上学期九月摸底考试{0}(理科)分段统计表" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
                     <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
@@ -90,7 +90,7 @@
                     <sheet caption="生物" sheetName="生物地理" subject="生物" totalScore="90" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true"/>
                 </workbook>
-                <workbook caption="文科" id="1" title="2014-2015学年度高一年级下学期期中考试{0}(文科)分段统计表" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
+                <workbook caption="文科" id="1" title="2015-2016学年度高二年级下学期九月摸底考试{0}(文科)分段统计表" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
                     <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
