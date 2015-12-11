@@ -376,8 +376,37 @@ namespace ScoreAnalyst
 
             });
 
-            return StoredProcedureQuery("\"getSectionByPosition\"", addParameters, true);
+            return StoredProcedureQuery("\"getSectionByPosition\"", addParameters, false);
         }
+
+        /// <summary>
+        /// 计算竞赛班的各名次分段的累计人数
+        /// </summary>
+        /// <param name="subjectType">学科类型:1-理科,2-文科,9-综合(未分科)</param>
+        /// <param name="subject">学科名称</param>
+        /// <param name="totalSection">总分名次</param>
+        /// <param name="classList">竞赛班列表,用逗号分隔</param>
+        /// <param name="sectionList">分段列表</param>
+        /// <param name="valid_entry">是否要求有效入围</param>
+        /// <returns></returns>
+        public static DataTable GetSectionByPositionValid(int subjectType, string subject, int totalSection, string classList, string sectionList, bool valid_entry)
+        {
+            Action<NpgsqlCommand> addParameters = new Action<NpgsqlCommand>((NpgsqlCommand cmd) =>
+              {
+                  cmd.Parameters.Clear();
+                  cmd.Parameters.Add(new NpgsqlParameter("\"@subjectType\"", subjectType));
+                  cmd.Parameters.Add(new NpgsqlParameter("@subject", subject));
+                  cmd.Parameters.Add(new NpgsqlParameter("\"@totalSection\"",totalSection));
+                  cmd.Parameters.Add(new NpgsqlParameter("\"@classList\"", classList));
+                  cmd.Parameters.Add(new NpgsqlParameter("\"@sectionList\"", sectionList));
+                  cmd.Parameters.Add(new NpgsqlParameter("\"@valid_entry\"", valid_entry));
+              });
+            return StoredProcedureQuery("\"getSectionByPositionValid\"", addParameters, false);
+
+        }
+
+
+
 
  /// <summary>
  /// 计算全年级教师的超差排名情况

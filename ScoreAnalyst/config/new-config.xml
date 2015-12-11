@@ -40,37 +40,27 @@
             </schema>
           </database>
         </grade>
-        <grade caption="高一年级" id="1" name="高一年级" database="score2014" target="true">
+        <grade caption="高一年级" id="1" name="高一年级" database="score2015" target="true">
         <report caption="报表格式设置">
-          <workbook caption="理科" id="0" title="2017届高一年级下学期期末考试{0}分段统计表(2015.7.10)" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
+          <workbook caption="理科" id="0" title="2018届高一年级上学期期中考试理科{0}分段统计表(2015.11.18)" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
             <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
             <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
             <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
             <sheet caption="物理" sheetName="物理政治" subject="物理" totalScore="110" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
             <sheet caption="化学" sheetName="化学历史" subject="化学" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
             <sheet caption="生物" sheetName="生物地理" subject="生物" totalScore="90" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="文综" sheetName="文综理综" subject="文综" totalScore="150" classStep="10" classCount="12" gradeStep="10" gradeCount="26" /> 
-            <sheet caption="总分" sheetName="总分" subject="总分" totalScore="900" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true"/>
-          </workbook>
-          <workbook caption="文科" id="1" title="2017届高一年级下学期期末考试{0}分段统计表(2015.7.10)" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
-            <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="政治" sheetName="物理政治" subject="政治" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="历史" sheetName="化学历史" subject="历史" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="地理" sheetName="生物地理" subject="地理" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-            <sheet caption="理综" sheetName="文综理综" subject="理综" totalScore="150" classStep="10" classCount="12" gradeStep="10" gradeCount="26" />
-            <sheet caption="总分" sheetName="总分" subject="总分" totalScore="900" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true"/>
+             <sheet caption="文综" sheetName="文综理综" subject="文综" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
+          <sheet caption="总分" sheetName="总分" subject="总分" totalScore="900" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true"/>
           </workbook>
         </report>
         <database caption="数据库设置">
           <initialize caption="初始化设置" initializeType="1">
             <subjectGroup caption="理科" subjectType="1" subjectList="语文,数学,英语,物理,化学,生物,文综" totalScoreExpression="语文+数学+英语+物理+化学+生物+文综"/>
-            <subjectGroup caption="文科" subjectType="2" subjectList="语文,数学,英语,政治,历史,地理,理综" totalScoreExpression="语文+数学+英语+政治+历史+地理+理综"/>
+            <subjectGroup caption="文科" subjectType="2" subjectList="语文,数学,英语,政治,历史,地理" totalScoreExpression="语文+数学+英语+政治+历史+地理"/>
           </initialize>
           <schema caption="导入数据格式">
             <table caption="理科成绩" id="0" name="理科成绩" target="tmp_science_score" fields="考号,姓名,班级,语文,数学,英语,物理,化学,生物,文综"/>
-            <table caption="文科成绩" id="1" name="文科成绩" target="tmp_arts_score" fields="考号,姓名,班级,语文,数学,英语,政治,历史,地理,理综"/>
+            <table caption="文科成绩" id="1" name="文科成绩" target="tmp_arts_score" fields="考号,姓名,班级,语文,数学,英语,政治,历史,地理"/>
             <table caption="任课教师一览表" id="2" name="任课教师一览表" target="teachers" fields="班级,班主任,语文,数学,英语,物理,化学,生物,政治,历史,地理"/>
             <table caption="班级信息(带考核目标)" id="3" name="班级信息(带考核目标)" target="class" fields="班级,类型,一本指标,二本指标,三本指标,班级类型"/>
             <table caption="不计考核学生名单" id="4" name="不计考核学生名单" target="ignore" fields="考号,姓名,班级"/>
@@ -81,23 +71,23 @@
       </grade>
         <grade caption="高二年级" id="2" name="高二年级" database="score2014" target="true">
             <report caption="报表格式设置">
-                <workbook caption="理科" id="0" title="2015-2016学年度高二年级上学期九月摸底考试{0}(理科)分段统计表" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
+                <workbook caption="理科" id="0" title="2015-2016学年度高二年级上学期期中考试{0}分段统计表" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
                     <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="物理" sheetName="物理政治" subject="物理" totalScore="110" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="化学" sheetName="化学历史" subject="化学" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="生物" sheetName="生物地理" subject="生物" totalScore="90" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-                    <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true"/>
+                    <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" />
                 </workbook>
-                <workbook caption="文科" id="1" title="2015-2016学年度高二年级下学期九月摸底考试{0}(文科)分段统计表" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
+                <workbook caption="文科" id="1" title="2015-2016学年度高二年级下学期期中考试{0}分段统计表" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
                     <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="政治" sheetName="物理政治" subject="政治" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="历史" sheetName="化学历史" subject="历史" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="地理" sheetName="生物地理" subject="地理" totalScore="100" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
-                    <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" ignoreRate="true"/>
+                    <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" />
                 </workbook>
             </report>
             <database caption="数据库设置">
