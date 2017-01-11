@@ -98,7 +98,7 @@ namespace ScoreAnalyst
                 ew.CreateSheet(sh.Subject);
                 //写入标题行
                 ew.Write(0, 0, string.Format(wb.Title, sh.Subject));
-                ew.MergeCells(0, 0, 0, sh.ClassCount + 6);
+                ew.MergeCells(0, 0, 0, sh.ClassCount + 9);
                 ew.SetH1Center(0, 0);
                 
                 dt = StaticQueryHelper.GetClassInformation(wb.SubjectType, sh.Subject);
@@ -197,7 +197,7 @@ namespace ScoreAnalyst
                     if(!writed)
                     {
                         ew.Write(0, 0, string.Format(wb.Title, sh.SheetName)); 
-                        ew.MergeCells(0,0,0,sh.ClassCount+6);
+                        ew.MergeCells(0,0,0,sh.ClassCount+9);
                         ew.SetH1Center(0,0);
                     }
 
@@ -217,8 +217,8 @@ namespace ScoreAnalyst
                         ew.Write(startRow, 4 + sh.ClassCount, dt, 1, true);
                         //最后一行的最后三列必须从数据库查询计算,而不是使用公式计算.
                         ew.Write(endRow, 4 + sh.ClassCount, StaticQueryHelper.GetGradeExcellentRate(wb.SubjectType, sh.Subject, sh.TotalScore));
-                        ew.Write(endRow, 5 + sh.ClassCount, StaticQueryHelper.GetGradePassRate(wb.SubjectType, sh.Subject, sh.TotalScore));
-                        ew.Write(endRow, 6 + sh.ClassCount, StaticQueryHelper.GetGradeAverage(wb.SubjectType, sh.Subject));
+                        ew.Write(endRow, 6 + sh.ClassCount, StaticQueryHelper.GetGradePassRate(wb.SubjectType, sh.Subject, sh.TotalScore));
+                        ew.Write(endRow, 8 + sh.ClassCount, StaticQueryHelper.GetGradeAverage(wb.SubjectType, sh.Subject));
                     }
                     //合计
                     ew.Write(endRow, 0, "合计");
@@ -246,8 +246,8 @@ namespace ScoreAnalyst
                     for (int r = startRow + 1; r < endRow + 1; r++)
                     {
                         ew.SetCellPercents(r, 4 + sh.ClassCount);
-                        ew.SetCellPercents(r, 5 + sh.ClassCount);
-                        ew.SetCellPrecision2(r, 6 + sh.ClassCount);
+                        ew.SetCellPercents(r, 6 + sh.ClassCount);
+                        ew.SetCellPrecision2(r, 8 + sh.ClassCount);
                     }
 
                     progressBar1.Increment(1);

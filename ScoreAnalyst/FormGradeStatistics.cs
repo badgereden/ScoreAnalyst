@@ -191,14 +191,30 @@ namespace ScoreAnalyst
                     startColumn += 1;
 
                     //如果年级未设置考核目标,则忽略
-                   if (Global.CurrentGrade.Target)
+                   //if (Global.CurrentGrade.Target)
+                   // {
+                   //     dt2 = StaticQueryHelper.GetSectionScore(wb.SubjectType, sh.Subject);
+                   //     ew.WriteHeader(i * 3 + 1, startColumn, dt2, 0);
+                   //     ew.Write(i * 3 + 2, startColumn, dt2);
+                   //     startColumn += 3;
+                   // }
+
+                    //分三列写入
+                    if (Global.CurrentGrade.Target)
                     {
-                        dt2 = StaticQueryHelper.GetSectionScore(wb.SubjectType, sh.Subject);
-                        ew.WriteHeader(i * 3 + 1, startColumn, dt2, 0);
-                        ew.Write(i * 3 + 2, startColumn, dt2);
-                        startColumn += 3;
+                        ew.Write(i * 3 + 1, startColumn, "一本线");
+                        ew.Write(i * 3 + 2, startColumn, StaticQueryHelper.GetSectionScore(wb.SubjectType, sh.Subject, 1));
+                        startColumn++;
+
+                        ew.Write(i * 3 + 1, startColumn, "希望线");
+                        ew.Write(i * 3 + 2, startColumn, StaticQueryHelper.GetSectionScore(wb.SubjectType, sh.Subject, 2));
+                        startColumn++;
+
                     }
-                   
+
+
+
+
                     //分段累计，因为这个统计列数不确定，所以要放在最右侧,可能生成的每一行长度不等.
                     dt = StaticQueryHelper.GetGradeSectionStatistics(wb.SubjectType, sh.Subject, sh.GradeStep, sh.GradeCount);
                     ew.WriteHeader(i * 3 + 1, startColumn, dt, 0);

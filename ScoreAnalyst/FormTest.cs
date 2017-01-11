@@ -18,29 +18,13 @@ namespace ScoreAnalyst
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n = StaticQueryHelper.UpdateIgnoreID();
-            MessageBox.Show(string.Format("更新学生考号,更新数量为{0}", n),"更新考号成功");
-        }
+            Report report = new Report(Global.GradeId, Global.CurrentGrade);
+            var science = new string[] { "语文", "数学", "英语","物理","化学","生物","总分"};
+            var arts= new string[] { "语文", "数学", "英语", "政治", "历史", "地理", "总分" };
+            report.ReportSectionByPositionValid("d:\\理科-实验班分段.xls", 1, "17,18,19",science, 30, "60", true);
+            report.ReportSectionByPositionValid("d:\\文科-实验班分段.xls", 2, "20,21", arts, 20, "40", true);
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormReport fr = new FormReport();
-            fr.ShowDialog();
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FormReportDifference frd = new FormReportDifference();
-            frd.ShowDialog();
-        }
-
-        private void btnInitialize_Click(object sender, EventArgs e)
-        {
-            foreach (XSubjectGroup sg in Global.CurrentGrade.Database.Initialize.SubjectGroupList)
-            {
-                StaticQueryHelper.Initialize(sg.SubjectType, sg.SubjectList, sg.TotalScoreExpression);
-            }
-            MessageBox.Show("初始化成功");
         }
     }
 }

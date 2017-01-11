@@ -39,6 +39,18 @@ namespace ScoreAnalyst
         }
 
 
+
+        /// <summary>
+        /// 调整学生核算班级
+        /// </summary>
+        public static void Adjust()
+        {
+            StoredProcedureNonQuery("adjust");
+        }
+
+
+
+
         /// <summary>
         /// 返回年级的每个班级的指定信息,已按班级排序.\r\n
         /// 字段列表:班级,任课教师,人数,最高分
@@ -125,7 +137,7 @@ namespace ScoreAnalyst
         /// <param name="subjectType">学科类别</param>
         /// <param name="subject">学科名称</param>
         /// <returns></returns>
-        public static DataTable GetSectionScore(int subjectType, string subject)
+             public static DataTable GetSectionScore(int subjectType, string subject)
         {
               Action<NpgsqlCommand> addParameters = new Action<NpgsqlCommand>(
                 (NpgsqlCommand cmd) =>{
@@ -136,6 +148,28 @@ namespace ScoreAnalyst
               return StoredProcedureQuery("\"getSectionScore\"", addParameters);
 
         }
+
+        /// <summary>
+        /// 返回全年级指定学科的分数线(一本线,二本线,三本线)
+        /// </summary>
+        /// <param name="subjectType">学科类别</param>
+        /// <param name="subject">学科名称</param>
+        /// <returns></returns>
+        public static DataTable GetSectionScore(int subjectType, string subject,int section)
+        {
+            Action<NpgsqlCommand> addParameters = new Action<NpgsqlCommand>(
+              (NpgsqlCommand cmd) => {
+                  cmd.Parameters.Add(new NpgsqlParameter("\"@subjectType\"", subjectType));
+                  cmd.Parameters.Add(new NpgsqlParameter("@subject", subject));
+                  cmd.Parameters.Add(new NpgsqlParameter("@section", section));
+              });
+
+            return StoredProcedureQuery("\"getSectionScore\"", addParameters);
+
+        }
+
+
+
         /// <summary>
         /// 返回全年级的及格率
         /// </summary>
@@ -376,7 +410,7 @@ namespace ScoreAnalyst
 
             });
 
-            return StoredProcedureQuery("\"getSectionByPosition\"", addParameters, false);
+            return StoredProcedureQuery("\"getSectionByPosition\"", addParameters, true);
         }
 
         /// <summary>
@@ -401,7 +435,7 @@ namespace ScoreAnalyst
                   cmd.Parameters.Add(new NpgsqlParameter("\"@sectionList\"", sectionList));
                   cmd.Parameters.Add(new NpgsqlParameter("\"@valid_entry\"", valid_entry));
               });
-            return StoredProcedureQuery("\"getSectionByPositionValid\"", addParameters, false);
+            return StoredProcedureQuery("\"getSectionByPositionValid\"", addParameters, true);
 
         }
 
@@ -423,7 +457,7 @@ namespace ScoreAnalyst
                 cmd.Parameters.Add(new NpgsqlParameter("\"@valid_entry\"", valid_entry));
                 cmd.Parameters.Add(new NpgsqlParameter("\"@contain_3th_section\"", contain_3th_section));
                  });
-            return StoredProcedureQuery("\"getGradeDifference\"",addParameters);
+            return StoredProcedureQuery("\"getGradeDifference\"",addParameters,true);
         }
 
         /// <summary>

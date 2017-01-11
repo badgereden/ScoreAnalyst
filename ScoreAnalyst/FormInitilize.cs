@@ -32,6 +32,8 @@ namespace ScoreAnalyst
             else
             {
                 bool delete_ignore = chbIgnore.Checked;
+
+
                 if (chbUpdateID.Checked)
                 {
                     int rows = StaticQueryHelper.UpdateIgnoreID();
@@ -43,6 +45,12 @@ namespace ScoreAnalyst
                 {
                     StaticQueryHelper.Initialize(sg.SubjectType, sg.SubjectList, sg.TotalScoreExpression, delete_ignore);
                 }
+
+                if (chbTarget.Checked)
+                {
+                    StaticQueryHelper.Adjust();
+                }
+
                 MessageBox.Show("初始化成功");
                 this.btnEnter.Text = "完成";
                 finish = true;
