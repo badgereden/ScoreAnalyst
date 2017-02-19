@@ -79,7 +79,7 @@
       </grade>
         <grade caption="2014级" id="2" name="2014级" database="score2014" target="true">
             <report caption="报表格式设置">
-                <workbook caption="理科" id="0" title="2014级高三年级上学期八校一联{0}分段统计表" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
+                <workbook caption="理科" id="0" title="2014级高三年级下学期二月调考{0}分段统计表" template="template\学科分段统计表-理科.xls" report="学科分段统计表-理科.xls" subjectType="1">
                     <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
@@ -89,7 +89,7 @@
                   <sheet caption="理综" sheetName="文综理综" subject="理综" totalScore="300" classStep="5" classCount="26" gradeStep="10" gradeCount="26"  />
                     <sheet caption="总分" sheetName="总分" subject="总分" totalScore="750" classStep="10" classCount="26" gradeStep="10" gradeCount="26" />
                 </workbook>
-                <workbook caption="文科" id="1" title="2014级高三年级上学期八校一联{0}分段统计表" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
+                <workbook caption="文科" id="1" title="2014级高三年级下学期二月调考{0}分段统计表" template="template\学科分段统计表-文科.xls" report="学科分段统计表-文科.xls" subjectType="2">
                     <sheet caption="语文" sheetName="语文" subject="语文" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="数学" sheetName="数学" subject="数学" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
                     <sheet caption="英语" sheetName="英语" subject="英语" totalScore="150" classStep="5" classCount="12" gradeStep="5" gradeCount="26"/>
